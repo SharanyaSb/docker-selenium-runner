@@ -39,7 +39,7 @@ services:
       - MODULE=search-module.xml
       - BROWSER=chrome
     volumes:
-      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/output/search-result:/usr/share/udemy/test-output
+      - ./output/search-result:/usr/share/udemy/test-output
   book-flight-module:
     image: sharanyasb/selenium-docker
     shm_size: '2g'
@@ -53,4 +53,4 @@ services:
       - MODULE=book-flight-module.xml
       - BROWSER=firefox
     volumes:
-      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/output/book-flight:/usr/share/udemy/test-output
+      - ./output/book-flight:/usr/share/udemy/test-output

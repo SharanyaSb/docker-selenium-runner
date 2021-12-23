@@ -14,7 +14,7 @@ pipeline {
                 bat "docker-compose up search-module book-flight-module"
             }
         }
-
+    }
     post{
 
     	always{
@@ -23,5 +23,5 @@ pipeline {
     	}	
     }
 
-    }
+    
 }

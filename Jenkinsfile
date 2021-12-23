@@ -24,7 +24,7 @@ pipeline {
     post{
 
     	always{
-    		archiveArtifacts artifacts: 'D:/Desktop/desktop/resume/Notes/docker/docker_selenium/output/**'
+    		archiveArtifacts artifacts: 'output/**'
     		bat "docker-compose down"
     	}	
     }

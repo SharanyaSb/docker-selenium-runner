@@ -2,8 +2,8 @@ version: "3"
 services:
   hub:
     image: selenium/hub:4.1.0
-    ports:
-      - "4444:4444"
+   # ports:
+   #   - "4444:4444"
   chrome:
     image: selenium/node-chrome:4.1.0
     shm_size: '2g'        
@@ -39,7 +39,7 @@ services:
       - MODULE=search-module.xml
       - BROWSER=chrome
     volumes:
-      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/search-result:/usr/share/udemy/test-output
+      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/output/search-result:/usr/share/udemy/test-output
   book-flight-module:
     image: sharanyasb/selenium-docker
     shm_size: '2g'
@@ -51,6 +51,6 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - MODULE=book-flight-module.xml
-      - BROWSER=chrome
+      - BROWSER=firefox
     volumes:
-      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/book-flight:/usr/share/udemy/test-output
+      - D:/Desktop/desktop/resume/Notes/docker/docker_selenium/output/book-flight:/usr/share/udemy/test-output
